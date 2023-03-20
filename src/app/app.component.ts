@@ -16,6 +16,11 @@ export class AppComponent implements OnInit {
     window.storyblok.on(['change', 'published'],  function() {
       location.reload()
     });
+    window.storyblok.on('input', (event) => {
+      if(this.story && event.story.content._uid === this.story.content._uid){
+        this.story = event.story
+      }
+    })
   }
 
   ngOnInit() {
