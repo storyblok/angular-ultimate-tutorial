@@ -20,6 +20,7 @@ export class StoryblokDirective {
  
     this.el.nativeElement.setAttribute('data-blok-c', JSON.stringify(options));
     this.el.nativeElement.setAttribute('data-blok-uid', options.id + '-' + options.uid);
+    this.el.nativeElement.classList.add("storyblok__outline");
   }
  
 }
