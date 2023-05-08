@@ -1,0 +1,14 @@
+version: 2
+updates:
+  - package-ecosystem: "npm"
+    directory: "/"
+    schedule:
+      interval: "daily"
+      time: "04:00"
+    target-branch: "main"
+    commit-message:
+      prefix: chore
+      include: scope
+    #if you need to ignore certain dependencies to ensure stability, you can use the "ignore" option
+    #ignore:
+      #- dependency-name: "example-dependency"
